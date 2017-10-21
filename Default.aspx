@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
+
 <html>
     <body>
 
@@ -51,7 +52,7 @@
                     </div>
                     <div class="collapse navbar-collapse" id="navbarmidle">
                         <div class="searchtxt">
-                            <h1>Tìn kiếm</h1>
+                            <h1>Tìm kiếm</h1>
                         </div>
                         <form class="navbar-form navbar-left searchformmargin" role="search">
                             <div class="form-group">
