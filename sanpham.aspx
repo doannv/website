@@ -4,6 +4,8 @@
     <style type="text/css">
         .auto-style1 {
             width: 406px;
+            background-color:#efeeef;
+            
         }
         .auto-style2 {
             width: 450px;
@@ -11,6 +13,7 @@
         }
         .auto-style3 {
             width: 567px;
+            background-color:#efeeef;
         }
     </style>
 </asp:Content>
@@ -23,7 +26,7 @@
             <td class="auto-style3">
                 <img alt="car8" class="auto-style2" src="image/car8.jpg" /></td>
             <td class="auto-style1">
-                <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSP" DataSourceID="SqlDataSource1" Width="227px">
+                <asp:FormView ID="FormView1" runat="server" AllowPaging="True" DataKeyNames="MaSP" DataSourceID="SqlDataSource1" Width="227px" CellPadding="4" ForeColor="#333333">
                     <EditItemTemplate>
                         Mã SP:
                         <asp:Label ID="MaSPLabel1" runat="server" Text='<%# Eval("MaSP") %>' />
@@ -46,6 +49,9 @@
                         <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                         &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
                     </EditItemTemplate>
+                    <EditRowStyle BackColor="#7C6F57" />
+                    <FooterStyle BackColor="#efeeef" Font-Bold="True" ForeColor="#efeeef" />
+                    <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                     <InsertItemTemplate>
                         Mã SP:
                         <asp:TextBox ID="MaSPTextBox" runat="server" Text='<%# Bind("MaSP") %>' />
@@ -91,6 +97,8 @@
                         &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
                         &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
                     </ItemTemplate>
+                    <PagerStyle BackColor="#efeeef" ForeColor="Black" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#efeeef" />
                 </asp:FormView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [SanPham] WHERE [MaSP] = @MaSP" InsertCommand="INSERT INTO [SanPham] ([MaSP], [MaLoaiSP], [Loai], [Ten], [Gia], [MoTa]) VALUES (@MaSP, @MaLoaiSP, @Loai, @Ten, @Gia, @MoTa)" SelectCommand="SELECT [MaSP], [MaLoaiSP], [Loai], [Ten], [Gia], [MoTa] FROM [SanPham]" UpdateCommand="UPDATE [SanPham] SET [MaLoaiSP] = @MaLoaiSP, [Loai] = @Loai, [Ten] = @Ten, [Gia] = @Gia, [MoTa] = @MoTa WHERE [MaSP] = @MaSP">
                     <DeleteParameters>
