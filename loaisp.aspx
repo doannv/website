@@ -4,7 +4,7 @@
     <style type="text/css">
         .auto-style1 {
             width: 740px;
-            background-color: #FFFFFF;
+            background-color: #ff6a00;
         }
         .auto-style2 {
             width: 450px;
