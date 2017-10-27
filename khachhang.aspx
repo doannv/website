@@ -1,6 +1,21 @@
 ﻿<%@ Page Title="Khách hàng" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="khachhang.aspx.cs" Inherits="khachhang" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" Runat="Server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 406px;
+            background-color:#F7F7DE;
+            
+        }
+        .auto-style2 {
+            width: 450px;
+            height: 389px;
+        }
+        .auto-style3 {
+            width: 567px;
+            background-color:#F7F7DE;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" Runat="Server">
 </asp:Content>
@@ -58,8 +73,8 @@
             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
             &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
         </ItemTemplate>
-        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-        <RowStyle BackColor="#F7F7DE" />
+        <PagerStyle BackColor="#D2691E" ForeColor="red" HorizontalAlign="Right" />
+        <RowStyle BackColor="#D2691E" />
     </asp:FormView>
     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [KhachHang] WHERE [MaKH] = @MaKH" InsertCommand="INSERT INTO [KhachHang] ([MaKH], [TenKH], [email], [SDT]) VALUES (@MaKH, @TenKH, @email, @SDT)" SelectCommand="SELECT [MaKH], [TenKH], [email], [SDT] FROM [KhachHang]" UpdateCommand="UPDATE [KhachHang] SET [TenKH] = @TenKH, [email] = @email, [SDT] = @SDT WHERE [MaKH] = @MaKH">
         <DeleteParameters>
